@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+ {% block title %}Create a new Event{% endblock %}
+
+ {% block content %}
+
+
+<h1>{{ post.title }}</h1>
+<small> By: {{post.name.first}} {{post.name.name}} </small><br/>
+<hr>
+<br/>
+{{ post.location }}
+
+<br/><br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}

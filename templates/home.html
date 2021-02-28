@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+ {% block content %}
+
+
+<h1>Event Details</h1>
+
+<ul>
+{% for post in object_list %}
+	<li> <a href="{% url 'article-detail' post.pk %} ">{{ post.date }}</a> - {{ post.name.first }}
+	{{ post.name.last }} <br/>
+	{{ post.location }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
